@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- <a-cylinder src="planet" 
+        side="double" position="1 2 -3" radius="5" height="0.5" open-ended="true" rotation="90 50 0">
+      </a-cylinder> -->
+      <a-assets>
+        <a-asset-items id="ccs" src="src/ccs/scene.gltf">
+          <a-asset-items id="pilar" src="src/pillar/scene.gltf"></a-asset-items>
+      </a-assets>
+
+      <!-- Halo Ring (inner) -->
+      <a-entity geometry="primitive: cylinder; width: 100; open-ended:true; side: double; radius: 5; height: 1;"
+          material="src: src/pulau.jpg; repeat: 5 1; side: double;"
+          rotation="90 50 -10"
+          position="1 2 -10"
+          scale="5 5 5">
+        </a-entity>
+
+        <!-- Halo Ring (outer) -->
+        <a-entity geometry="primitive: cylinder; width: 100; open-ended:true; side: double; radius: 5.01; height: 1;"
+          material="src: src/HaloMap_back.jpg; repeat: 10 1; side: double;"
+          rotation="90 50 -10"
+          position="1 2 -10"
+          scale="5 5 5">
+        </a-entity>
+
+        <!-- Covenant 1 -->
+        <a-entity
+          gltf-model="src/ccs/scene.gltf"
+          scale="0.0005 0.0005 0.0005"
+          position="0.15005 1.58777 -2.2909"
+          rotation="-2.4385083760767836 75.73012361362143 -4.73320434557573">
+        </a-entity>
+
+        <!-- Covenant 2 -->
+        <a-entity gltf-model="src/ccs/scene.gltf"
+        scale="0.0005 0.0005 0.0005"
+        position="1.31954 1.43754 -0.74046"
+        rotation="-2.4385083760767836 75.73012361362144 -4.73320434557573">
+        </a-entity>
+
+        <!-- Covenant 3 -->
+        <a-entity gltf-model="src/ccs/scene.gltf"
+        scale="0.0005 0.0005 0.0005"
+        position="-0.78631 1.7204 -0.88643"
+        rotation="-2.4385083760767836 75.73012361362144 -4.73320434557573">
+        </a-entity>
+
+         <!-- Covenant 4 -->
+         <a-entity gltf-model="src/ccs/scene.gltf"
+         scale="0.0005 0.0005 0.0005"
+         position="1.47783 1.72128 -1.74893" 
+         rotation="-2.4385083760767836 75.73012361362144 -4.73320434557573">
+         </a-entity>
+
+        <!-- Pillar Of Autumn -->
+        <a-entity gltf-model="src/pillar/scene.gltf"
+        scale="0.0007 0.0007 0.0007"
+        position="1.16989 1.19035 -4.38056"
+        rotation="-2.4385083760767836 -6.1862253140274985 -4.73320434557573">
+        </a-entity>
+          <a-entity 
+          text="value: First Halo Discovered\n Installation 04\n September 19, 2552;"
+          color="#ffffff"
+          position="1.16989 1.19035 -0.80716"
+          ></a-entity>
+      <a-sky src="src/sky.jpg"></a-sky>
+    </a-scene>
+  </body>
+</html>
